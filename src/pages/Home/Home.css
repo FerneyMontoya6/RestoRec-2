@@ -1,0 +1,92 @@
+main {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+main img {
+    width: 20rem;
+    height: 20rem;
+    margin: 1.5rem;
+    object-fit: cover;
+}
+
+.main-images-section {
+    width: 45%;
+}
+
+.main-info-content {
+    width: 55%;
+}
+
+.main-info-content--h2 {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+}
+
+.main-info-content--paragraph {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 3rem;
+    line-height: 3rem;
+}
+
+.btn-discover {
+    margin-top: 2rem;
+}
+
+/* ------------- Nuevas experiencias secction ------------- */
+.bg-nuevas-experiencias {
+    width: 100%;
+    height: 55rem;
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white-opacity);
+}
+.nuevas-experiencias {
+    width: 120rem;
+    padding: 0 5%;
+    margin: 3rem auto;
+    display: flex;
+}
+
+.nuevas-experiencias img {
+    width: 24rem;
+    height: 47rem;
+    object-fit: cover;
+}
+
+.nuevas-experiencias--left-img {
+    border-left: 5px solid white;
+    -webkit-box-shadow: -20px -20px 0px -2px #000000;
+    box-shadow: -20px -20px 0px -2px #000000;
+}
+.nuevas-experiencias--right-img {
+    border-right: 5px solid white;
+    -webkit-box-shadow: 20px -20px 0px -2px #000000;
+    box-shadow: 20px -20px 0px -2px #000000;
+}
+
+.nuevas-experiencias--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    text-align: center;
+}
+
+.nuevas-experiencias--h2 {
+    font-size: 3.5rem;
+}
+
+.nuevas-experiencias--p {
+    display: inline-block;
+    width: 95%;
+    margin-bottom: 2rem;
+}

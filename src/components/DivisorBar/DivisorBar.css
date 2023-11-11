@@ -1,0 +1,5 @@
+.divisor-bar-medium {
+    width: 70rem;
+    margin: 0 auto;
+    border: solid var(--black) 0.5px;
+}

@@ -1,0 +1,33 @@
+/* Archivo para configurar estilos globales y variables */
+:root {
+    --topHeaderFontSize: 7rem;
+    --headerFontSize: 3rem;
+    --subheaderFontSize: 2.4rem;
+    --paragraphFontSize: 1.6rem;
+    --header4FontSize: 1.4rem;
+    --header5FontSize: 1.1rem;
+    --white: #ffffffff;
+    --black: #121212ff;
+    --red: #e41616ff;
+    --white-opacity: #edededff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}

@@ -1,0 +1,25 @@
+.btn {
+    border: none;
+    padding: 0 1.5rem;
+    display: block;
+    background-color: var(--red);
+    color: white;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.btn:active {
+    transform: scale(0.9);
+}
+
+.btn-small {
+    height: 3.5rem;
+    border-radius: 3rem;
+}
+
+.btn-medium {
+    height: 4rem;
+    border-radius: 3.2rem;
+}
