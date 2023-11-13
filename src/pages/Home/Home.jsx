@@ -4,10 +4,16 @@ import { Button } from "../../components/Button/Button.jsx";
 import { Footer } from "../../components/Footer/Footer.jsx";
 import "./Home.css";
 
+import { Link } from "react-router-dom";
+
 const Home = () => {
     return (
         <>
-            <Header btnText={"Descubrelo ahora"} btnSize={"small"}></Header>
+            <Header
+                btnText={"Descubrelo ahora"}
+                btnSize={"small"}
+                sndLinkText={"Nuevas experiencias"}
+            ></Header>
             <Hero
                 h1Text={"Descubre la Experiencia Gastronómica Perfecta"}
                 descText={
@@ -44,11 +50,16 @@ const Home = () => {
                         Desde cocinas exóticas hasta los favoritos locales,
                         satisfaga sus antojos con solo unos pocos clics
                     </p>
-                    <Button size={"medium"} text={"Descubrelo"}></Button>
+                    <Link to={"/descubrir"}>
+                        <Button size={"medium"} text={"Descubrelo"}></Button>
+                    </Link>
                 </div>
             </main>
 
-            <section className="bg-nuevas-experiencias">
+            <section
+                className="bg-nuevas-experiencias"
+                id="bg-nuevas-experiencias"
+            >
                 <div className="nuevas-experiencias">
                     <img
                         className="nuevas-experiencias--left-img"
@@ -66,10 +77,12 @@ const Home = () => {
                             ayudará a destacar esos lugares especiales que
                             merecen ser descubiertos.
                         </p>
-                        <Button
-                            size={"medium"}
-                            text={"Nuevo Restaurante"}
-                        ></Button>
+                        <Link to={"/nuevas-experiencias"}>
+                            <Button
+                                size={"medium"}
+                                text={"Nuevo Restaurante"}
+                            ></Button>
+                        </Link>
                     </div>
                     <img
                         className="nuevas-experiencias--right-img"

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../Button/Button";
 import "./Header.css";
 
-const Header = ({ btnSize, btnText }) => {
+const Header = ({ btnSize, btnText, sndLinkText }) => {
     return (
         <>
             <header>
@@ -16,10 +16,12 @@ const Header = ({ btnSize, btnText }) => {
                 <nav>
                     <ul>
                         <li className="nav-nuevas-experiencias">
-                            <Link>Nuevas experiencias</Link>
+                            <Link to={"/nuevas-experiencias"}>
+                                {sndLinkText}
+                            </Link>
                         </li>
                         <li>
-                            <Link>
+                            <Link to={"/descubrir"}>
                                 <Button size={btnSize} text={btnText}></Button>
                             </Link>
                         </li>
