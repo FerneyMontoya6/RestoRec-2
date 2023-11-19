@@ -1,0 +1,53 @@
+.choose-type-of-food {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.react-multi-carousel-list {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.h2-descubrir {
+    margin-left: 11%;
+    margin-top: 5rem;
+}
+
+.food-selected {
+    width: 76%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.food-selected--p {
+    display: contents;
+    margin-right: 2rem;
+    font-weight: bold;
+}
+
+.food-selected--categories {
+    margin-left: 2rem;
+}
+
+.continue-btn-container {
+    width: 76%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+}
+
+.location {
+    width: 80%;
+    height: 55vh;
+    margin: 1rem auto;
+    border: 2px dashed var(--red);
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

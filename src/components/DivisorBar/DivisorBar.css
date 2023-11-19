@@ -3,3 +3,9 @@
     margin: 0 auto;
     border: solid var(--black) 0.5px;
 }
+
+.divisor-bar-long {
+    width: 100rem;
+    margin: 0 auto;
+    border: solid var(--black) 0.5px;
+}
