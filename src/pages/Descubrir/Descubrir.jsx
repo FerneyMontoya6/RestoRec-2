@@ -3,6 +3,7 @@ import { CuisineCard } from "../../components/CuisineCard/CuisineCard.jsx";
 import { cuisinesImgObj } from "../../utils/cuisinesImgObjc.js";
 import { LabelCard } from "../../components/LabelCard/LabelCard.jsx";
 import { Button } from "../../components/Button/Button.jsx";
+import { MapView } from "../../components/MapView/MapView.jsx";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -103,6 +104,7 @@ const Descubrir = () => {
                         size={"habilitar"}
                         text={"Habilitar"}
                         screen={screen}
+                        setScreen={setScreen}
                         location={location}
                         setLocation={setLocation}
                     ></Button>
@@ -111,9 +113,28 @@ const Descubrir = () => {
                     <Button
                         size={"medium"}
                         text={"Continuar"}
-                        screen={screen}
-                        setScreen={setScreen}
-                        type={"location"}
+                        location
+                    ></Button>
+                </div>
+            </>
+        );
+    } else if (screen === "location-map") {
+        return (
+            <>
+                <Header
+                    btnText={"Descubrelo ahora"}
+                    btnSize={"small"}
+                    sndLinkText={"Nuevas experiencias"}
+                ></Header>
+                <h2 className="h2-descubrir">Ubicación actual:</h2>
+                <section className="location">
+                    <MapView></MapView>
+                </section>
+                <div className="continue-btn-container">
+                    <Button
+                        size={"medium"}
+                        text={"Continuar"}
+                        location
                     ></Button>
                 </div>
             </>

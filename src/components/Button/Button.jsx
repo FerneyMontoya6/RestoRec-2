@@ -54,7 +54,8 @@ const Button = ({
             setCardState(cardStates[0]);
         } else if (screen === "") {
             setScreen("location");
-        } else if (screen === "location") {
+        } else if (size === "habilitar") {
+            setScreen("location-map");
         }
     };
 
