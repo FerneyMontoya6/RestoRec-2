@@ -55,7 +55,15 @@ const Button = ({
         } else if (screen === "") {
             setScreen("location");
         } else if (size === "habilitar") {
+            navigator.geolocation.getCurrentPosition((pos) => {
+                const lat = pos.coords.latitude.toString();
+                const lng = pos.coords.longitude.toString();
+
+                setLocation({ lat, lng });
+            });
+
             setScreen("location-map");
+        } else if (screen === "location-map") {
         }
     };
 
@@ -75,7 +83,6 @@ const Button = ({
                         setCuisinesSelectedOriginal,
                         screen,
                         setScreen,
-                        type,
                         location,
                         setLocation
                     )

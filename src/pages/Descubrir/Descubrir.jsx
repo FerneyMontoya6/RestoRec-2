@@ -12,11 +12,10 @@ import { useState } from "react";
 
 const Descubrir = () => {
     const [screen, setScreen] = useState("");
-    const [location, setLocation] = useState("fasdf");
+    const [location, setLocation] = useState(null);
 
     const responsive = {
         superLargeDesktop: {
-            // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 1024 },
             items: 5
         },
@@ -128,7 +127,7 @@ const Descubrir = () => {
                 ></Header>
                 <h2 className="h2-descubrir">Ubicación actual:</h2>
                 <section className="location">
-                    <MapView></MapView>
+                    <MapView location={location}></MapView>
                 </section>
                 <div className="continue-btn-container">
                     <Button
