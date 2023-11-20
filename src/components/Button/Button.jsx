@@ -7,7 +7,6 @@ const Button = ({
     size,
     text,
     children,
-    cardState,
     setCardState,
     cuisineText,
     cuisineTextOriginal,
@@ -17,12 +16,10 @@ const Button = ({
     setCuisinesSelectedOriginal,
     screen,
     setScreen,
-    type,
     location,
     setLocation
 }) => {
     const addCuisine = (
-        cardState,
         setCardState,
         cuisineText,
         cuisineTextOriginal,
@@ -54,7 +51,22 @@ const Button = ({
             setCardState(cardStates[0]);
         } else if (screen === "") {
             setScreen("location");
-        } else if (screen === "location") {
+        } else if (size === "habilitar") {
+            navigator.geolocation.getCurrentPosition(
+                (pos) => {
+                    const lat = pos.coords.latitude;
+                    const lng = pos.coords.longitude;
+
+                    setLocation({ lat, lng });
+                },
+                (error) => {
+                    console.log(error);
+                }
+            );
+
+            if (location !== "") {
+                setScreen("location-map");
+            }
         }
     };
 
@@ -64,7 +76,6 @@ const Button = ({
                 className={`btn btn-${size}`}
                 onClick={() =>
                     addCuisine(
-                        cardState,
                         setCardState,
                         cuisineText,
                         cuisineTextOriginal,
@@ -74,7 +85,6 @@ const Button = ({
                         setCuisinesSelectedOriginal,
                         screen,
                         setScreen,
-                        type,
                         location,
                         setLocation
                     )
