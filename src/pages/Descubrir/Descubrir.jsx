@@ -3,20 +3,19 @@ import { CuisineCard } from "../../components/CuisineCard/CuisineCard.jsx";
 import { cuisinesImgObj } from "../../utils/cuisinesImgObjc.js";
 import { LabelCard } from "../../components/LabelCard/LabelCard.jsx";
 import { Button } from "../../components/Button/Button.jsx";
+import { MapView } from "../../components/MapView/MapView.jsx";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./Descubrir.css";
 import { useState } from "react";
-import { MapView } from "../../components/MapView/MapView.jsx";
 
 const Descubrir = () => {
     const [screen, setScreen] = useState("");
-    const [location, setLocation] = useState("");
+    const [location, setLocation] = useState(null);
 
     const responsive = {
         superLargeDesktop: {
-            // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 1024 },
             items: 5
         },
@@ -110,12 +109,27 @@ const Descubrir = () => {
                     ></Button>
                 </section>
                 <div className="continue-btn-container">
+                    <Button size={"medium"} text={"Continuar"}></Button>
+                </div>
+            </>
+        );
+    } else if (screen === "location-map") {
+        return (
+            <>
+                <Header
+                    btnText={"Descubrelo ahora"}
+                    btnSize={"small"}
+                    sndLinkText={"Nuevas experiencias"}
+                ></Header>
+                <h2 className="h2-descubrir">Ubicación actual:</h2>
+                <section className="location">
+                    <MapView location={location}></MapView>
+                </section>
+                <div className="continue-btn-container">
                     <Button
                         size={"medium"}
                         text={"Continuar"}
-                        screen={screen}
-                        setScreen={setScreen}
-                        type={"location"}
+                        location
                     ></Button>
                 </div>
             </>
@@ -138,7 +152,6 @@ const Descubrir = () => {
                         text={"Continuar"}
                         screen={screen}
                         setScreen={setScreen}
-                        type={"location"}
                     ></Button>
                 </div>
             </>

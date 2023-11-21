@@ -19,7 +19,7 @@ const Button = ({
     location,
     setLocation
 }) => {
-    const addCuisine = (
+    const handdleButton = (
         setCardState,
         cuisineText,
         cuisineTextOriginal,
@@ -52,21 +52,15 @@ const Button = ({
         } else if (screen === "") {
             setScreen("location");
         } else if (size === "habilitar") {
-            navigator.geolocation.getCurrentPosition(
-                (pos) => {
-                    const lat = pos.coords.latitude;
-                    const lng = pos.coords.longitude;
+            navigator.geolocation.getCurrentPosition((pos) => {
+                const lat = pos.coords.latitude.toString();
+                const lng = pos.coords.longitude.toString();
 
-                    setLocation({ lat, lng });
-                },
-                (error) => {
-                    console.log(error);
-                }
-            );
+                setLocation({ lat, lng });
+            });
 
-            if (location !== "") {
-                setScreen("location-map");
-            }
+            setScreen("location-map");
+        } else if (screen === "location-map") {
         }
     };
 
@@ -75,7 +69,7 @@ const Button = ({
             <button
                 className={`btn btn-${size}`}
                 onClick={() =>
-                    addCuisine(
+                    handdleButton(
                         setCardState,
                         cuisineText,
                         cuisineTextOriginal,
