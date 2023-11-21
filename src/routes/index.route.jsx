@@ -8,7 +8,7 @@ export const router = createBrowserRouter([
     {
         path: "/",
         element: <Home></Home>,
-        errorElement: <h1>Carechimba 404</h1>
+        errorElement: <h1>Not found 404</h1>
     },
     {
         path: "/descubrir",

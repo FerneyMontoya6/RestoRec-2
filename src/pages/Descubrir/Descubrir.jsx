@@ -4,35 +4,18 @@ import { cuisinesImgObj } from "../../utils/cuisinesImgObjc.js";
 import { LabelCard } from "../../components/LabelCard/LabelCard.jsx";
 import { Button } from "../../components/Button/Button.jsx";
 import { MapView } from "../../components/MapView/MapView.jsx";
-
 import Carousel from "react-multi-carousel";
+
+import { responsiveCarousel } from "../../utils/responsiveCarousel.js";
+
 import "react-multi-carousel/lib/styles.css";
 import "./Descubrir.css";
+
 import { useState } from "react";
 
 const Descubrir = () => {
     const [screen, setScreen] = useState("");
     const [location, setLocation] = useState(null);
-
-    const responsive = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 1024 },
-            items: 5
-        },
-        desktop: {
-            breakpoint: { max: 1024, min: 800 },
-            items: 4
-        },
-        tablet: {
-            breakpoint: { max: 800, min: 464 },
-            items: 2
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-        }
-    };
-
     const [cuisinesSelected, setcuisinesSelected] = useState([]);
     const [cuisinesSelectedOriginal, setCuisinesSelectedOriginal] = useState(
         []
@@ -49,7 +32,7 @@ const Descubrir = () => {
                 <h2 className="h2-descubrir">
                     ¿Qué tipo de comida quieres probar hoy?
                 </h2>
-                <Carousel responsive={responsive} className="carousel">
+                <Carousel responsive={responsiveCarousel} className="carousel">
                     {cuisinesImgObj.map((item) => (
                         <CuisineCard
                             key={item.originalCuisineText}
