@@ -1,17 +1,10 @@
-const trackLocation = () => {
-    let latitude;
-    let longitude;
-    navigator.geolocation.getCurrentPosition(
-        (pos) => {
-            latitude = pos.coords.latitude;
-            longitude = pos.coords.longitude;
-        },
-        (error) => {
-            console.log(error);
-        }
-    );
+const trackLocation = (setLocation) => {
+    navigator.geolocation.getCurrentPosition((pos) => {
+        const lat = pos.coords.latitude.toString();
+        const lng = pos.coords.longitude.toString();
 
-    return [latitude, longitude];
+        setLocation({ lat, lng });
+    });
 };
 
 export { trackLocation };

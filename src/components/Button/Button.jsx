@@ -1,7 +1,8 @@
 import { cardStates } from "../CuisineCard/CuisineCard.jsx";
+import { substractionCards } from "../../utils/substractionCards.js";
 import { trackLocation } from "../../utils/trackLocation.js";
+
 import "./Button.css";
-import { useEffect } from "react";
 
 const Button = ({
     size,
@@ -32,6 +33,7 @@ const Button = ({
         location,
         setLocation
     ) => {
+        // Handdle to btn cards
         if (size === "add") {
             setCuisinesSelected([...cuisinesSelected, cuisineText]);
             setCuisinesSelectedOriginal([
@@ -40,27 +42,24 @@ const Button = ({
             ]);
             setCardState(cardStates[1]);
         } else if (size === "substraction") {
-            const newCuisineSelected = cuisinesSelected.filter(
-                (element) => element !== cuisineText
-            );
-            const newCuisineSelectedOriginal = cuisinesSelectedOriginal.filter(
-                (element) => element !== cuisineTextOriginal
-            );
+            const [newCuisineSelected, newCuisineSelectedOriginal] =
+                substractionCards(
+                    cuisinesSelected,
+                    cuisinesSelectedOriginal,
+                    cuisineText,
+                    cuisineTextOriginal
+                );
             setCuisinesSelected(newCuisineSelected);
             setCuisinesSelectedOriginal(newCuisineSelectedOriginal);
             setCardState(cardStates[0]);
-        } else if (screen === "") {
+        }
+
+        // Handdle to location section
+        else if (screen === "") {
             setScreen("location");
         } else if (size === "habilitar") {
-            navigator.geolocation.getCurrentPosition((pos) => {
-                const lat = pos.coords.latitude.toString();
-                const lng = pos.coords.longitude.toString();
-
-                setLocation({ lat, lng });
-            });
-
+            trackLocation(setLocation);
             setScreen("location-map");
-        } else if (screen === "location-map") {
         }
     };
 

@@ -117,28 +117,6 @@ const Descubrir = () => {
                 </div>
             </>
         );
-    } else if (screen === "location-map") {
-        return (
-            <>
-                <Header
-                    btnText={"Descubrelo ahora"}
-                    btnSize={"small"}
-                    sndLinkText={"Nuevas experiencias"}
-                ></Header>
-                <h2 className="h2-descubrir">Ubicaión actual:</h2>
-                <section className="location">
-                    <MapView location={location} />
-                </section>
-                <div className="continue-btn-container">
-                    <Button
-                        size={"medium"}
-                        text={"Continuar"}
-                        screen={screen}
-                        setScreen={setScreen}
-                    ></Button>
-                </div>
-            </>
-        );
     }
 };
 
