@@ -9,7 +9,7 @@
     --white: #ffffffff;
     --black: #121212ff;
     --red: #e41616ff;
-    --white-opacity: #edededff;
+    --white-opacity: rgba(237, 237, 237, 0.91);
 }
 
 * {
@@ -34,9 +34,14 @@ a {
     color: var(--black);
 }
 
+header {
+    z-index: 100;
+}
+
 /* Estilos map leaflet */
 .leaflet-container {
     width: 100%;
     height: 100%;
     border-radius: 2rem;
+    z-index: 1;
 }

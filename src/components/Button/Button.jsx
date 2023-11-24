@@ -1,6 +1,7 @@
 import { cardStates } from "../CuisineCard/CuisineCard.jsx";
 import { substractionCards } from "../../utils/substractionCards.js";
 import { trackLocation } from "../../utils/trackLocation.js";
+import { becomeUnicQuery } from "../../utils/becomeUnicQuery.js";
 
 import "./Button.css";
 
@@ -18,7 +19,10 @@ const Button = ({
     screen,
     setScreen,
     location,
-    setLocation
+    setLocation,
+    setLoadingRestaurants,
+    stringRestaurants,
+    setStringRestaurants
 }) => {
     const handdleButton = (
         setCardState,
@@ -31,7 +35,9 @@ const Button = ({
         screen,
         setScreen,
         location,
-        setLocation
+        setLocation,
+        stringRestaurants,
+        setStringRestaurants
     ) => {
         // Handdle to btn cards
         if (size === "add") {
@@ -56,10 +62,19 @@ const Button = ({
 
         // Handdle to location section
         else if (screen === "") {
+            setStringRestaurants(becomeUnicQuery(cuisinesSelectedOriginal));
             setScreen("location");
         } else if (size === "habilitar") {
+            console.log(stringRestaurants);
             trackLocation(setLocation);
             setScreen("location-map");
+        }
+
+        // Buscar restaurantes
+        else if (size === "buscar-restaurantes") {
+            setScreen("restaurants");
+            setLoadingRestaurants(true);
+        } else if (screen === "restaurants") {
         }
     };
 
@@ -79,7 +94,9 @@ const Button = ({
                         screen,
                         setScreen,
                         location,
-                        setLocation
+                        setLocation,
+                        stringRestaurants,
+                        setStringRestaurants
                     )
                 }
             >

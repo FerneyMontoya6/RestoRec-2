@@ -1,7 +1,7 @@
 import L from "leaflet";
-import urlIcon from "../../public/assets/cuisines-images/location-dot-solid-blue.svg";
+import urlIcon from "../../public/assets/cuisines-images/location-dot-solid-red.svg";
 
-const LocationIcon = L.icon({
+const LocationIconBlue = L.icon({
     iconUrl: urlIcon,
     iconRetinaUrl: urlIcon,
     iconAnchor: null,
@@ -12,4 +12,4 @@ const LocationIcon = L.icon({
     className: "leaflet-venue-icon"
 });
 
-export { LocationIcon };
+export { LocationIconBlue };

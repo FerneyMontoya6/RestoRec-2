@@ -20,7 +20,8 @@
 }
 
 .btn-medium,
-.btn-habilitar {
+.btn-habilitar,
+.btn-buscar-restaurantes {
     height: 4rem;
     border-radius: 3.2rem;
 }

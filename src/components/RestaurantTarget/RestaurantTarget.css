@@ -1,0 +1,99 @@
+.restaurant-target {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white-opacity);
+}
+
+.restaurant-target p {
+    width: initial;
+    margin: initial;
+}
+
+.restaurant-target--left {
+    display: flex;
+}
+.restaurant-target--left img {
+    width: 18rem;
+    height: 18rem;
+    margin-right: 2rem;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.restaurant-target--left__info-container {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.restaurant-target--right {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.restaurant-target--right__rating-container {
+    display: flex;
+    justify-content: end;
+}
+
+.rating-number {
+    width: fit-content;
+    height: 4rem;
+    padding: 0 2.5rem;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--red);
+    margin-left: 2rem;
+}
+
+.label-cuisine {
+    width: fit-content;
+    height: 4rem;
+    padding: 0 1rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    background-color: var(--red);
+}
+
+.label-cuisine p {
+    font-size: 1.6rem;
+}
+
+.restaurant-target--right__favorite {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+    margin-right: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.restaurant-target--right__favorite:hover {
+    cursor: pointer;
+    color: var(--red);
+}
+
+.heart-icon {
+    font-size: 2rem;
+}
+.heart-icon:hover {
+    cursor: pointer;
+}

@@ -20,3 +20,5 @@ const becomeUnicQuery = (cusisinesSelectedOriginal) => {
 
     return unicQuery;
 };
+
+export { becomeUnicQuery };
