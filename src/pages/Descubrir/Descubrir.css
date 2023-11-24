@@ -53,3 +53,33 @@
 }
 
 /* ----------- Styles for 5 restaurants nearest ----------- */
+.info-context {
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-context p {
+    margin: initial;
+}
+
+.info-context button {
+    height: 4rem;
+}
+
+.map-modal-container {
+    width: 100%;
+    height: 100%;
+}
+
+.open-modal {
+    padding: 0 2rem;
+    border: none;
+    border-radius: 3rem;
+    font-weight: 700;
+    color: white;
+    background-color: var(--red);
+    cursor: pointer;
+}

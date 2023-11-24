@@ -4,6 +4,9 @@ import { LabelCard } from "../../components/LabelCard/LabelCard.jsx";
 import { Button } from "../../components/Button/Button.jsx";
 import { MapView } from "../../components/MapView/MapView.jsx";
 import { RestaurantTarget } from "../../components/RestaurantTarget/RestaurantTarge.jsx";
+import { Modal } from "../../components/Modal/Modal.jsx";
+
+import styled from "styled-components";
 import Carousel from "react-multi-carousel";
 
 import { cuisinesImgObj } from "../../utils/cuisinesImgObjc.js";
@@ -27,6 +30,8 @@ const Descubrir = () => {
     const [loadingRestaurants, setLoadingRestaurants] = useState(false);
     const [restaurants, setRestaurants] = useState(null);
     const [errorRestaurants, setErrorRestaurants] = useState(null);
+
+    const [modalState, setModalState] = useState(false);
 
     useEffect(() => {
         if (loadingRestaurants) {
@@ -163,12 +168,37 @@ const Descubrir = () => {
                     <p>Error: {errorRestaurants}</p>
                 ) : (
                     <>
-                        <section className="location">
-                            <MapView
-                                location={location}
-                                restaurantsLocation={restaurants}
-                            ></MapView>
-                        </section>
+                        <Modal
+                            modalState={modalState}
+                            setModalState={setModalState}
+                        >
+                            <section
+                                className="location"
+                                style={{
+                                    border: "none",
+                                    width: "100%"
+                                }}
+                            >
+                                <MapView
+                                    location={location}
+                                    restaurantsLocation={restaurants}
+                                ></MapView>
+                            </section>
+                        </Modal>
+
+                        <div className="info-context">
+                            <div className="current-location text">
+                                <p>Showing</p>
+                                <h2>Restaurants Nearest:</h2>
+                            </div>
+                            <button
+                                className="open-modal"
+                                onClick={() => setModalState(!modalState)}
+                            >
+                                Open Map
+                            </button>
+                        </div>
+
                         <section className="restaurants-nearest-container">
                             {restaurants.map(
                                 ({
