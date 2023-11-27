@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 import "./RestaurantTarget.css";
+import { useEffect, useState } from "react";
 
 const RestaurantTarget = ({
     restaurantName,
@@ -12,7 +13,14 @@ const RestaurantTarget = ({
     ratingText,
     aggregationRating
 }) => {
-    const numeroAleatorio = Math.floor(Math.random() * 50) + 1;
+    //const numeroAleatorio = Math.floor(Math.random() * 50) + 1;
+
+    const [numeroAleatorio, setNumeroAleatorio] = useState(1);
+
+    useEffect(() => {
+        const numeroAleatorioGenerado = Math.floor(Math.random() * 50) + 1;
+        setNumeroAleatorio(numeroAleatorioGenerado);
+    }, [numeroAleatorio]);
 
     return (
         <>
