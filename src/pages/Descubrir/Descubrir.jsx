@@ -6,7 +6,6 @@ import { MapView } from "../../components/MapView/MapView.jsx";
 import { RestaurantTarget } from "../../components/RestaurantTarget/RestaurantTarge.jsx";
 import { Modal } from "../../components/Modal/Modal.jsx";
 
-import styled from "styled-components";
 import Carousel from "react-multi-carousel";
 
 import { cuisinesImgObj } from "../../utils/cuisinesImgObjc.js";

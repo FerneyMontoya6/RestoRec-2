@@ -11,11 +11,10 @@ const MapView = ({ location, restaurantsLocation }) => {
             <>
                 <MapContainer center={location} zoom={13}>
                     <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                    <Marker position={location} icon={LocationIconBlue}>
-                        <Popup>
-                            <div>Hola</div>
-                        </Popup>
-                    </Marker>
+                    <Marker
+                        position={location}
+                        icon={LocationIconBlue}
+                    ></Marker>
                     {restaurantsLocation.map((restaurant) => (
                         <Marker
                             position={{
@@ -26,7 +25,12 @@ const MapView = ({ location, restaurantsLocation }) => {
                             key={restaurant.id}
                         >
                             <Popup>
-                                <div>Hola</div>
+                                <small
+                                    className="p-map"
+                                    style={{ fontSize: "1.2rem" }}
+                                >
+                                    {restaurant.restaurant_name}
+                                </small>
                             </Popup>
                         </Marker>
                     ))}

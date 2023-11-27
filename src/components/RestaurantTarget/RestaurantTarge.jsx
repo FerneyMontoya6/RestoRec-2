@@ -12,12 +12,14 @@ const RestaurantTarget = ({
     ratingText,
     aggregationRating
 }) => {
+    const numeroAleatorio = Math.floor(Math.random() * 50) + 1;
+
     return (
         <>
             <article className="restaurant-target">
                 <div className="restaurant-target--left">
                     <img
-                        src="../../../public/assets/restaurantsImages/1.png"
+                        src={`../../../public/assets/restaurantsImages/${numeroAleatorio}.png`}
                         alt=""
                     />
                     <div className="restaurant-target--left__info-container">
@@ -45,12 +47,12 @@ const RestaurantTarget = ({
                             <p>{aggregationRating}</p>
                         </div>
                     </div>
-                    <button className="restaurant-target--right__favorite">
+                    {/* <button className="restaurant-target--right__favorite">
                         <FontAwesomeIcon
                             className="heart-icon"
                             icon={faHeart}
                         />
-                    </button>
+                    </button> */}
                 </div>
             </article>
         </>

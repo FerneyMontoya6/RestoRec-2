@@ -11,8 +11,11 @@ const getRestaurants = async (
             `${endPoint}api/restaurants/${location.lat}/${location.lng}/?cuisines=${stringRestaurants}`
         );
         const data = await res.json();
+        const dataSorted = [...data].sort(
+            (a, b) => a.distanceKm - b.distanceKm
+        );
 
-        setData(data);
+        setData(dataSorted);
     } catch (error) {
         setError("Hubo un error al obtener los restaurantes");
     } finally {
