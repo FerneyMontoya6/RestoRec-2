@@ -1,5 +1,5 @@
 import { Header } from "../../components/Header/Header.jsx";
-import { Footer } from "../../components/Footer/Footer.jsx";
+import { Modal } from "../../components/Modal/Modal.jsx";
 import "./NuevasExperiencias.css";
 
 import { cuisinesImgObj } from "../../utils/cuisinesImgObjc.js";
@@ -17,6 +17,10 @@ const NuevasExperiencias = () => {
     const [cities, setCities] = useState([]);
     const [city, setCity] = useState("");
 
+    const alertRegister = () => {
+        alert("New restaurant registered successfully");
+    };
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -25,7 +29,7 @@ const NuevasExperiencias = () => {
                     {
                         headers: {
                             Authorization:
-                                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJmZXJuZXkubW9udG95YWdAZ21haWwuY29tIiwiYXBpX3Rva2VuIjoiX1ptZ25vcnYxYzdsOENGSm56MGxPczA2QXVqMktsQThyYjBQajIyRUVaWUYycDFSMkM1Z1VMZ19sbnotMmlmOEt4RSJ9LCJleHAiOjE3MDExMTk0NTJ9.-UNjlFg-WyUcSB_fcj4Lf5W2HB2fIHF2Mwah4S93B1U",
+                                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJmZXJjaG9wcm8wOUBnbWFpbC5jb20iLCJhcGlfdG9rZW4iOiJQajJUYy13bXZqUzkwRkJiRXk5eFJNUkZHU2tubU03MUVfWTdHdzJDUGFyazY3Tk5oa1l6dHZUb184UlRsWlBYakYwIn0sImV4cCI6MTcwMTIxMDE1Mn0.yyDxHgfO9HESwah7BwV3kgF5LccwMBjlNaIntnLnq9Y",
                             Accept: "application/json"
                         }
                     }
@@ -50,7 +54,7 @@ const NuevasExperiencias = () => {
                         {
                             headers: {
                                 Authorization:
-                                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJmZXJuZXkubW9udG95YWdAZ21haWwuY29tIiwiYXBpX3Rva2VuIjoiX1ptZ25vcnYxYzdsOENGSm56MGxPczA2QXVqMktsQThyYjBQajIyRUVaWUYycDFSMkM1Z1VMZ19sbnotMmlmOEt4RSJ9LCJleHAiOjE3MDExMTk0NTJ9.-UNjlFg-WyUcSB_fcj4Lf5W2HB2fIHF2Mwah4S93B1U",
+                                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJmZXJjaG9wcm8wOUBnbWFpbC5jb20iLCJhcGlfdG9rZW4iOiJQajJUYy13bXZqUzkwRkJiRXk5eFJNUkZHU2tubU03MUVfWTdHdzJDUGFyazY3Tk5oa1l6dHZUb184UlRsWlBYakYwIn0sImV4cCI6MTcwMTIxMDE1Mn0.yyDxHgfO9HESwah7BwV3kgF5LccwMBjlNaIntnLnq9Y",
                                 Accept: "application/json"
                             }
                         }
@@ -76,7 +80,7 @@ const NuevasExperiencias = () => {
                         {
                             headers: {
                                 Authorization:
-                                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJmZXJuZXkubW9udG95YWdAZ21haWwuY29tIiwiYXBpX3Rva2VuIjoiX1ptZ25vcnYxYzdsOENGSm56MGxPczA2QXVqMktsQThyYjBQajIyRUVaWUYycDFSMkM1Z1VMZ19sbnotMmlmOEt4RSJ9LCJleHAiOjE3MDExMTk0NTJ9.-UNjlFg-WyUcSB_fcj4Lf5W2HB2fIHF2Mwah4S93B1U",
+                                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJmZXJjaG9wcm8wOUBnbWFpbC5jb20iLCJhcGlfdG9rZW4iOiJQajJUYy13bXZqUzkwRkJiRXk5eFJNUkZHU2tubU03MUVfWTdHdzJDUGFyazY3Tk5oa1l6dHZUb184UlRsWlBYakYwIn0sImV4cCI6MTcwMTIxMDE1Mn0.yyDxHgfO9HESwah7BwV3kgF5LccwMBjlNaIntnLnq9Y",
                                 Accept: "application/json"
                             }
                         }
@@ -246,7 +250,11 @@ const NuevasExperiencias = () => {
                             </label>
                         </div>
                     </div>
-                    <button type="submit" className="btn-submit">
+                    <button
+                        type="submit"
+                        className="btn-submit"
+                        onSubmit={() => alertRegister()}
+                    >
                         Send
                     </button>
                 </form>

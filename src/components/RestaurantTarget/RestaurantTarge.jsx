@@ -13,8 +13,6 @@ const RestaurantTarget = ({
     ratingText,
     aggregationRating
 }) => {
-    //const numeroAleatorio = Math.floor(Math.random() * 50) + 1;
-
     const [numeroAleatorio, setNumeroAleatorio] = useState(1);
 
     useEffect(() => {

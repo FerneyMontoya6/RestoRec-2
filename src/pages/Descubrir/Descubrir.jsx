@@ -49,12 +49,12 @@ const Descubrir = () => {
         return (
             <>
                 <Header
-                    btnText={"Descubrelo ahora"}
+                    btnText={"Discover it now"}
                     btnSize={"small"}
-                    sndLinkText={"Nuevas experiencias"}
+                    sndLinkText={"New experiencies"}
                 ></Header>
                 <h2 className="h2-descubrir">
-                    ¿Qué tipo de comida quieres probar hoy?
+                    What kind of food do you want to try today?
                 </h2>
                 <Carousel responsive={responsiveCarousel} className="carousel">
                     {cuisinesImgObj.map((item) => (
@@ -74,9 +74,7 @@ const Descubrir = () => {
                     ))}
                 </Carousel>
                 <section className="food-selected">
-                    <p className="food-selected--p">
-                        Categorías seleccionadas:{" "}
-                    </p>
+                    <p className="food-selected--p">Selected categories: </p>
                     <div className="food-selected--categories">
                         {cuisinesSelected.map((item) => (
                             <LabelCard text={item} key={item}></LabelCard>
@@ -87,7 +85,7 @@ const Descubrir = () => {
                 <div className="continue-btn-container">
                     <Button
                         size={"medium"}
-                        text={"Continuar"}
+                        text={"Next"}
                         screen={screen}
                         setScreen={setScreen}
                         cuisinesSelectedOriginal={cuisinesSelectedOriginal}
@@ -100,17 +98,15 @@ const Descubrir = () => {
         return (
             <>
                 <Header
-                    btnText={"Descubrelo ahora"}
+                    btnText={"Discover it now"}
                     btnSize={"small"}
-                    sndLinkText={"Nuevas experiencias"}
+                    sndLinkText={"New experiencies"}
                 ></Header>
-                <h2 className="h2-descubrir">
-                    Por favor habilite su ubicación:
-                </h2>
+                <h2 className="h2-descubrir">Please enable your location:</h2>
                 <section className="location">
                     <Button
                         size={"habilitar"}
-                        text={"Habilitar"}
+                        text={"Enable"}
                         screen={screen}
                         setScreen={setScreen}
                         location={location}
@@ -119,7 +115,7 @@ const Descubrir = () => {
                     ></Button>
                 </section>
                 <div className="continue-btn-container">
-                    <Button size={"medium"} text={"Continuar"}></Button>
+                    <Button size={"medium"} text={"Next"}></Button>
                 </div>
             </>
         );
@@ -127,11 +123,11 @@ const Descubrir = () => {
         return (
             <>
                 <Header
-                    btnText={"Descubrelo ahora"}
+                    btnText={"Discover it now"}
                     btnSize={"small"}
-                    sndLinkText={"Nuevas experiencias"}
+                    sndLinkText={"New experiencies"}
                 ></Header>
-                <h2 className="h2-descubrir">Ubicación actual:</h2>
+                <h2 className="h2-descubrir">Current location:</h2>
                 <section className="location">
                     <MapView
                         location={location}
@@ -141,7 +137,7 @@ const Descubrir = () => {
                 <div className="continue-btn-container">
                     <Button
                         size={"buscar-restaurantes"}
-                        text={"Buscar restaurantes"}
+                        text={"Search restaurants"}
                         setScreen={setScreen}
                         location={location}
                         cuisinesSelected={cuisinesSelected}
@@ -156,9 +152,9 @@ const Descubrir = () => {
         return (
             <>
                 <Header
-                    btnText={"Descubrelo ahora"}
+                    btnText={"Discover it now"}
                     btnSize={"small"}
-                    sndLinkText={"Nuevas experiencias"}
+                    sndLinkText={"New experiencies"}
                 ></Header>
                 {loadingRestaurants ? (
                     // Añadir los skeletons

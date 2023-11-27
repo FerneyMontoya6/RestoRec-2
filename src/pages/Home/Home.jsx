@@ -10,14 +10,14 @@ const Home = () => {
     return (
         <>
             <Header
-                btnText={"Descubrelo ahora"}
+                btnText={"Discover it now"}
                 btnSize={"small"}
-                sndLinkText={"Nuevas experiencias"}
+                sndLinkText={"New experiencies"}
             ></Header>
             <Hero
-                h1Text={"Descubre la Experiencia Gastronómica Perfecta"}
+                h1Text={"Discover the Perfect Gastronomic Experience"}
                 descText={
-                    "Permítanos guiarlo a los mejores restaurantes cercanos según su ubicación y preferencias culinarias. Dile adiós a lasbúsquedas interminables y saluda el deleite culinario"
+                    "Let us guide you to the best restaurants nearby based on your location and culinary preferences. Say goodbye to endless searches and say hello to culinary delight"
                 }
             ></Hero>
             <main>
@@ -41,17 +41,16 @@ const Home = () => {
                 </div>
                 <div className="main-info-content">
                     <h2 className="main-info-content--h2">
-                        Explora un mundo de dabores
+                        Explore a world of flavors
                     </h2>
                     <p className="main-info-content--paragraph  ">
-                        Nuestra plataforma lleva el mundo de los sabores
-                        directamente a su puerta, ofreciendo una amplia gama de
-                        experiencias culinarias esperando ser descubiertas.
-                        Desde cocinas exóticas hasta los favoritos locales,
-                        satisfaga sus antojos con solo unos pocos clics
+                        Our platform brings the world of flavors directly to
+                        your door, offering a wide range of culinary experiences
+                        waiting to be discovered. From exotic cuisines to local
+                        favorites, satisfy your cravings with just a few clicks
                     </p>
                     <Link to={"/descubrir"}>
-                        <Button size={"medium"} text={"Descubrelo"}></Button>
+                        <Button size={"medium"} text={"Discover it"}></Button>
                     </Link>
                 </div>
             </main>
@@ -68,19 +67,19 @@ const Home = () => {
                     />
                     <div className="nuevas-experiencias--container">
                         <h2 className="nuevas-experiencias--h2">
-                            Ayudanos a Seguir Descubriendo Nuevos Restaurantes
+                            Help us Continue Discovering New Restaurants
                         </h2>
                         <p className="nuevas-experiencias--p">
-                            ¿Conoces un restaurante increíble que aún no está en
-                            nuestra lista? Tu aporte no solo enriquecerá la
-                            experiencia de otros usuarios, sino que también
-                            ayudará a destacar esos lugares especiales que
-                            merecen ser descubiertos.
+                            Do you know an amazing restaurant that isn't on yet?
+                            our list? Your contribution will not only enrich the
+                            experience of other users, but also will help
+                            highlight those special places that They deserve to
+                            be discovered.
                         </p>
                         <Link to={"/nuevas-experiencias"}>
                             <Button
                                 size={"medium"}
-                                text={"Nuevo Restaurante"}
+                                text={"New restaurant"}
                             ></Button>
                         </Link>
                     </div>
