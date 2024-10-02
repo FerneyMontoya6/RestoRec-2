@@ -29,7 +29,7 @@ const NuevasExperiencias = () => {
                     {
                         headers: {
                             Authorization:
-                                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJmZXJjaG9wcm8wOUBnbWFpbC5jb20iLCJhcGlfdG9rZW4iOiJQajJUYy13bXZqUzkwRkJiRXk5eFJNUkZHU2tubU03MUVfWTdHdzJDUGFyazY3Tk5oa1l6dHZUb184UlRsWlBYakYwIn0sImV4cCI6MTcwMTIxMDE1Mn0.yyDxHgfO9HESwah7BwV3kgF5LccwMBjlNaIntnLnq9Y",
+                                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJmZXJuZXkubW9udG95YUB1ZGVhLmVkdS5jbyIsImFwaV90b2tlbiI6InhEdERVZ1BvLVNoZFhGUV9xZVVZVzg0Zmg1d1NCT0s4TWxuNkZnZHdoaENmT1U4ckZYLWxhYk0teEdpRUlCd25ZRzAifSwiZXhwIjoxNzAxMzAwNDAzfQ.LNWa5sOtCnSSmlQTymr3C0ZdQ1TIBQ6Yj5GdmSglfpI",
                             Accept: "application/json"
                         }
                     }
@@ -54,7 +54,7 @@ const NuevasExperiencias = () => {
                         {
                             headers: {
                                 Authorization:
-                                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJmZXJjaG9wcm8wOUBnbWFpbC5jb20iLCJhcGlfdG9rZW4iOiJQajJUYy13bXZqUzkwRkJiRXk5eFJNUkZHU2tubU03MUVfWTdHdzJDUGFyazY3Tk5oa1l6dHZUb184UlRsWlBYakYwIn0sImV4cCI6MTcwMTIxMDE1Mn0.yyDxHgfO9HESwah7BwV3kgF5LccwMBjlNaIntnLnq9Y",
+                                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJmZXJuZXkubW9udG95YUB1ZGVhLmVkdS5jbyIsImFwaV90b2tlbiI6InhEdERVZ1BvLVNoZFhGUV9xZVVZVzg0Zmg1d1NCT0s4TWxuNkZnZHdoaENmT1U4ckZYLWxhYk0teEdpRUlCd25ZRzAifSwiZXhwIjoxNzAxMzAwNDAzfQ.LNWa5sOtCnSSmlQTymr3C0ZdQ1TIBQ6Yj5GdmSglfpI",
                                 Accept: "application/json"
                             }
                         }
@@ -80,7 +80,7 @@ const NuevasExperiencias = () => {
                         {
                             headers: {
                                 Authorization:
-                                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJmZXJjaG9wcm8wOUBnbWFpbC5jb20iLCJhcGlfdG9rZW4iOiJQajJUYy13bXZqUzkwRkJiRXk5eFJNUkZHU2tubU03MUVfWTdHdzJDUGFyazY3Tk5oa1l6dHZUb184UlRsWlBYakYwIn0sImV4cCI6MTcwMTIxMDE1Mn0.yyDxHgfO9HESwah7BwV3kgF5LccwMBjlNaIntnLnq9Y",
+                                    "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJmZXJuZXkubW9udG95YUB1ZGVhLmVkdS5jbyIsImFwaV90b2tlbiI6InhEdERVZ1BvLVNoZFhGUV9xZVVZVzg0Zmg1d1NCT0s4TWxuNkZnZHdoaENmT1U4ckZYLWxhYk0teEdpRUlCd25ZRzAifSwiZXhwIjoxNzAxMzAwNDAzfQ.LNWa5sOtCnSSmlQTymr3C0ZdQ1TIBQ6Yj5GdmSglfpI",
                                 Accept: "application/json"
                             }
                         }
